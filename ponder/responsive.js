@@ -10,7 +10,7 @@ figure out datetime
 
 */
 
-function displayWelcome(){
+function displayWelcome() {
     const headerEl = document.querySelector("header");
     const dayindex = new Date().getDay();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
