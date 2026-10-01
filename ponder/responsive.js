@@ -30,6 +30,10 @@ function addIndex() {
     const scriptureElements = document.querySelectorAll(".scripture")
     scriptureElements.forEach(renderNum);
 }
+//Menu button start
+// function toggleMenu(){}
+
+// document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
 
 addIndex()
 displayWelcome()
