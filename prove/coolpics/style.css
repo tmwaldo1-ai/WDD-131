@@ -7,7 +7,8 @@ a {
     color: white;
 }
 
-header, footer {
+header,
+footer {
     background-color: #297bff;
     color: white;
 }
@@ -25,8 +26,20 @@ img {
     margin: 20px
 }
 
+#options {
+    display: flex;
+    justify-content: center;
+}
+
+#options a {
+    margin: 6px;
+}
+
 @media screen and (max-width: 1000px) {
     #r3 {
+        display: none;
+    }
+    #options {
         display: none;
     }
 }
@@ -34,5 +47,14 @@ img {
 @media screen and (max-width: 730px) {
     #r2 {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #menu {
+        display: none;
+    }
+    #options {
+        display: flex;
     }
 }
