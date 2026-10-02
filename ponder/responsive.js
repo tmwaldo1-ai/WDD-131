@@ -31,9 +31,13 @@ function addIndex() {
     scriptureElements.forEach(renderNum);
 }
 //Menu button start
-// function toggleMenu(){}
+function toggleMenu() {
+    const menu = document.querySelectorAll("nav a");
+    menu.forEach(link => link.classList.toggle('show'));
+}
 
-// document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
+document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
+
 
 addIndex()
 displayWelcome()

@@ -36,6 +36,10 @@ nav a {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 nav a:hover {
     text-decoration: none;
     color: #616061;
@@ -46,6 +50,8 @@ nav a:hover {
     border: none;
     background-color: transparent;
 }
+
+
 
 .bar1,
 .bar2,
