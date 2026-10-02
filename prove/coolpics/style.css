@@ -16,3 +16,23 @@ header, footer {
     display: none;
 }
 
+main {
+    display: flex;
+}
+
+img {
+    border: solid grey 5px;
+    margin: 20px
+}
+
+@media screen and (max-width: 1000px) {
+    #r3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    #r2 {
+        display: none;
+    }
+}
