@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header, footer {
+    background-color: #297bff;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
