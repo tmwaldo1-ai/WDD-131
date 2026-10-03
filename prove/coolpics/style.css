@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a {
@@ -11,10 +12,6 @@ header,
 footer {
     background-color: #297bff;
     color: white;
-}
-
-.hide {
-    display: none;
 }
 
 main {
@@ -39,6 +36,7 @@ img {
     #r3 {
         display: none;
     }
+
     #options {
         display: none;
     }
@@ -54,7 +52,12 @@ img {
     #menu {
         display: none;
     }
+
     #options {
         display: flex;
     }
+}
+
+#options.show {
+    display: flex;
 }
