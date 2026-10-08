@@ -8,7 +8,7 @@ const closeButton = modal.querySelector('.close-viewer');
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-
+    
     // Code to show modal  - Use event parameter 'e'   
 
 }
