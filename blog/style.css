@@ -33,6 +33,8 @@ main {
 
 .info {
     text-align: right;
+    margin: 32px;
+    padding-right: 24px;
 }
 
 .booksum {
@@ -42,14 +44,21 @@ main {
     align-items: center;
 }
 
-/* .booksum > p {
-    max-width: 400px;
-} */
-
 img {
     max-width: 250px;
 }
 
 footer {
     border-top: var(--border);
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .info {
+        border-right: var(--border);
+    }
 }
