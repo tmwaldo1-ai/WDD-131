@@ -1,0 +1,55 @@
+:root {
+    --border: 2px solid gold;
+}
+
+body {
+    font-family: "Times New Roman", Times, "Liberation Serif", serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: brown
+}
+
+nav {
+    text-align: right;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 16px;
+}
+
+nav a {
+    margin: 6px;
+    text-decoration: none;
+    color: brown;
+}
+
+main {
+    display: grid;
+}
+
+.info {
+    text-align: right;
+}
+
+.booksum {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .booksum > p {
+    max-width: 400px;
+} */
+
+img {
+    max-width: 250px;
+}
+
+footer {
+    border-top: var(--border);
+}
