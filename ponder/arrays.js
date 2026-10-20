@@ -28,3 +28,13 @@ const gpaPoints = grades.map(convertToPts);
 console.log(gpaPoints);
 
 // A3 Reduce
+const fruit = ['watermelon','peach','apple','tomato','grape']
+
+function testLength(item) {
+    if(item.length < 6) {
+        return true;
+    } else return false;
+}
+
+const shortFruit = fruit.filter(testLength);
+console.log(shortFruit);
