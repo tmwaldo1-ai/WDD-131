@@ -45,17 +45,19 @@ articles.forEach(book => {
 });
 
 function bookTemplate(book) {
-    return `
-<div class="info">
+    return `<div class="info">
             <p>${book.date}</p>
             <p>${book.ages}</p>
             <p>${book.genre}</p>
-            <p><span aria-label="${movie.stars.length} out of 5 stars" role="img">${movie.stars}</span></p>
+            <p><span aria-label="${book.stars.length} out of 5 stars" role="img">${book.stars}</span></p>
         </div>
         <div class="booksum">
         <h2>${book.title}</h2>
         <img src="${book.imgSrc}" alt="${book.imgAlt}">
         <p>${book.description}</p>
-        </div>
-`;
-}
+        </div>`
+};
+
+const booksHtml = articles.map(bookTemplate);
+const booksection = document.querySelector('main');
+booksection.innerHTML = booksHtml.join('');
