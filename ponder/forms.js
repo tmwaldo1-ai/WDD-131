@@ -10,7 +10,7 @@ function updateNotesField() {
   const value = travelRange.value;
 
   // Show the travel notes on the form if they are choosing many campuses and require it
-  
+
 }
 
 travelRange.addEventListener("change", updateNotesField);
@@ -28,7 +28,7 @@ function getSelectedCampuses() {
   //.from converts a NodeList into a real array, so then you can use .filter and .map
   return Array.from(campusBoxes)
     .filter(box => box.checked)
-    .map(box => box.value); 
+    .map(box => box.value);
 }
 
 form.addEventListener("submit", function (event) {
@@ -45,13 +45,18 @@ form.addEventListener("submit", function (event) {
 
   // Validate the input
   // Let the user know to select at least one campus
-
-  
+  const campusCount = getSelectedCampuses();
+  if (campusCount.length != 1 && travelRange.value == "one") {
+    output.textContent = "Please select one campus.";
+    return;
+  }
   // Let the user know if they choose many campuses but didn't put a note that they need to add a note
-
-  
+  if (campusCount.length != 1 && travelRange.value == "") {
+  output.textContent = "Please select one campus.";
+  return;
+}
   //Let the user know if they choose many campus but only had one campus selected that they need to choose at least two campuses
-  
+
 
   if (isPastDate(availableDate)) {
     output.textContent = "Please choose a later date.";
@@ -70,4 +75,3 @@ form.addEventListener("submit", function (event) {
   form.reset();
   updateNotesField();
 });
-          
