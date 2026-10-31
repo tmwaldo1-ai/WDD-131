@@ -4,12 +4,15 @@ const username = document.querySelector('#uname');
 const password = document.querySelector('#pword');
 
 //event listener for user type selection
-
-
-//If user selects student then display student ID field
-if (userType.value === 'student') {
-    username.classList.toggle('fullinput');
+function userTypeChange() {
+    //If user selects student then display student ID field
+    if (userType.value === 'student') {
+        username.classList.toggle('fullinput');
+    }
+    else {
+        username.classList.remove('fullinput');
+    };
 }
-else {
-    username.classList.remove('fullinput');
-};
+
+userType.addEventListener('change', userTypeChange);
+
