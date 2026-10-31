@@ -21,23 +21,31 @@ form>div {
 }
 
 #ticket {
-    display: grid;
+    display: inline-grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: row;
+}
+
+#pword,
+#uname {
+    display: none;
+}
+
+label {
+    padding: 2px
 }
 
 .fullinput {
     grid-column: 1 / 3;
 }
 
-.pword,
-.uname {
-    display: none;
+#uname.fullinput {
+    grid-column: 1 / 3;
 }
 
-label {
-    padding: 2px
+#pword.fullinput {
+    grid-column: 1 / 3;
 }
 
 input, select, button{
