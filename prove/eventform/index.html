@@ -16,19 +16,19 @@
             <form id="ticket">
                 <div class="halfinput">
                     <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" required>
                 </div>
                 <div class="halfinput">
                     <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" required>
                 </div>
                 <div class="fullinput">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="halfinput">
                     <label for="type">Type</label>
-                    <select id="type" name="type">
+                    <select id="type" name="type" required>
                         <option value="">Choose one</option>
                         <option value="student">Student</option>
                         <option value="guest">Guest</option>
@@ -36,15 +36,15 @@
                 </div>
                 <div class="halfinput">
                     <label for="date">Event Date</label>
-                    <input type="date" id="date" name="date"></select>
+                    <input type="date" id="date" name="date" required>
                 </div>
                 <div class="uname">
                     <label for="stuid">Student ID</label>
-                    <input type="text" id="stuid" name="stuid">
+                    <input type="text" id="stuid" name="stuid" required>
                 </div>
                 <div class="pword">
                     <label for="sudo">Access Code</label>
-                    <input type="text" id="sudo" name="sudo">
+                    <input type="text" id="sudo" name="sudo" required>
                 </div>
                 <button class="fullinput" type="submit">Create Ticket</button>
             </form>
