@@ -19,16 +19,15 @@ const aCourse = {
     ],
     enrollStudent: function(num) {
         // get the section that has sectionNum == num
-        const theSection = aCourse.sections.find(section => section.sectionNum === num);
-        // increment enrolled
+        const theSection = aCourse.sections.find(section => section.sectionNum == num);
         console.log(theSection)
+        // increment enrolled
         theSection.enrolled++;
     },
     dropStudent: function(num) {
         // get the section that has sectionNum == num
-        const theSection = aCourse.sections.find(section => section.sectionNum === num);
+        const theSection = aCourse.sections.find(section => section.sectionNum == num);
         // increment enrolled
-        console.log(theSection)
         theSection.enrolled--;
     },
 };
@@ -55,10 +54,11 @@ function setSections(sections) {
 setSections(aCourse.sections);
 aCourse.enrollStudent(1);
 
-function enrollHandler(ev) {
-    console.log(ev)
-    if (ev.target.id === "#enrollStudent")
-        enrollStudent(num)
+function enrollHandler() {
+    const input = document.getElementById("sectionNumber").value;
+    const num = input;
+    aCourse.enrollStudent(num);
+    setSections(aCourse.sections);
 }
 
 document.querySelector("#enrollStudent").addEventListener("click", enrollHandler)
