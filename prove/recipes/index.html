@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipes.css">
     <script src="script.js" defer></script>
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
@@ -22,12 +22,18 @@
     <link rel="icon" href="/favicon.ico">
     <!-- One Apple Touch Icon (iOS home screen) -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img id="logo" src="images/recipe-book.png" alt="Logo">
-        <p>RecipeBook</p>
+        <div class="logo-container">
+            <img id="logo" src="images/recipe-book.png" alt="Logo">
+            <h1>RecipeBook</h1>
+        </div>
         <nav>
             <form id="searchbox">
                 <label for="search">Find a recipe</label>
