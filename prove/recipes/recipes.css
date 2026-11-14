@@ -107,6 +107,10 @@ main {
     padding: 12px;
 }
 
+.recipe-desc {
+    display: none;
+}
+
 .tag {
     border: solid black 1px;
     border-radius: 2px;
@@ -142,4 +146,40 @@ footer > a {
 .social>a {
     width: 7.5vw;
     margin: 2px;
+}
+
+@media screen and (min-width: 650px) {
+    body {
+        max-width: 1280px;
+        margin: auto;
+        padding: 1em;
+    }
+
+    .recipe-card {
+        flex-direction: row;
+    }
+
+    .recipe-desc {
+        display: block;
+        text-align: left;
+    }
+
+    .tag {
+        font-size: large;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .social {
+        order: 1;
+    }
+
+    .social>a {
+        width: 5vw;
+        max-width: 100px;
+    }
 }
