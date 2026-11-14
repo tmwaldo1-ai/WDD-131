@@ -36,8 +36,7 @@
         </div>
         <nav>
             <form id="searchbox">
-                <label for="search">Find a recipe</label>
-                <input type="text" id="search" name="search">
+                <input type="search" id="search" name="q" placeholder="Find a recipe">
                 <button type="submit">
                     <img src="images/search.svg">
                 </button>
@@ -47,18 +46,22 @@
     <hr>
     <main>
         <section class="recipe-card">
-            <img src="images/apple-crisp.jpg">
-            <div class="tag">
-                <span>dessert</span>
+            <div class="cardimg">
+                <img src="images/apple-crisp.jpg">
             </div>
-            <h2>Apple Crisp</h2>
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
+            <div class="cardinfo">
+                <div class="tag">
+                    <span>dessert</span>
+                </div>
+                <h2>Apple Crisp</h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+            </div>
         </section>
     </main>
     <footer>
