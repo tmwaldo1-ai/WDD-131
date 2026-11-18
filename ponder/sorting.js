@@ -65,7 +65,41 @@ const hikes = [
         trailhead: [43.78555, -111.98996]
     }
 ];
-const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
+const simpleList = ["oranges",
+    "grapes",
+    "lemons",
+    "apples",
+    "Bananas",
+    "watermelons",
+    "coconuts",
+    "broccoli",
+    "mango"];
 
 const simpleSort = simpleList.sort()
-console.log(simpleList);
+console.log(compareFn("simple", simpleList));
+function compareFn(a,b) {
+  if (a < b) {
+    return 1;
+  } else if (a > b) {
+    return -1;
+  }
+ // a must be equal to b
+ return 0;
+
+}
+const anotherSort = simpleList.sort(compareFn);
+console.log("function", simpleList);
+
+function searchList(list, q) {
+    function searchCallback(string) {
+        return string.toLowerCase().includes(q.toLowerCase());
+    }
+
+    const filteredList = list.filter(searchCallback);
+    const filtered2 = list.filter((string) => string.toLowerCase().includes(q.toLowerCase()))
+    return filteredList;
+}
+
+const filtered = searchList(simpleList, "b")
+console.log(filtered);
+
