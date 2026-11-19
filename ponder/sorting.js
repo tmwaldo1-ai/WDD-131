@@ -91,15 +91,17 @@ const anotherSort = simpleList.sort(compareFn);
 console.log("function", simpleList);
 
 function searchList(list, q) {
-    function searchCallback(string) {
-        return string.toLowerCase().includes(q.toLowerCase());
+    function searchCallback(hike) {
+        return hike.name.toLowerCase().includes(q.toLowerCase()) ||
+        hike.description.toLowerCase().includes(q.toLowerCase()) ||
+        hike.tags.some((tag) => tag.toLowerCase().includes(q.toLowerCase()))
     }
 
     const filteredList = list.filter(searchCallback);
-    const filtered2 = list.filter((string) => string.toLowerCase().includes(q.toLowerCase()))
+
     return filteredList;
 }
 
-const filtered = searchList(simpleList, "b")
+const filtered = searchList(hikes, "mod")
 console.log(filtered);
 
