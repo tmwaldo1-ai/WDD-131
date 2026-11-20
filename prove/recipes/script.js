@@ -279,5 +279,25 @@ const recipes = [
 		recipeYield: '12 servings',
 		rating: 4
 	}
-]            
-                    
+]
+// TODO: show random recipe when first loading page
+
+//contstants
+const searchSubmit = document.querySelector('button')
+const searchQuery = document.getElementById('search')
+const searchForm = document.querySelector('form')
+
+//event listener for search bar
+searchForm.addEventListener('submit', function (event) {
+	event.preventDefault(); // Call preventDefault on the event object
+	search(searchQuery.value);
+});
+
+//search function
+function search(query) {
+	const nameResult = recipes.filter(recipe => recipe.name.toLowerCase().includes(query.toLowerCase()));
+	const descResult = recipes.filter(recipe => recipe.description.toLowerCase().includes(query.toLowerCase()));
+	const tagResult = recipes.filter(recipe => recipe.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())));
+	const result = [...nameResult, ...descResult, ...tagResult];
+	console.log(result);
+}
